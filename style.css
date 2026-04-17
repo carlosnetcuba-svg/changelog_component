@@ -1,0 +1,96 @@
+
+*{
+    
+}
+
+header{
+    text-align: center;
+}
+
+.container{
+    
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+}
+
+.step{
+    
+    visibility: hidden;
+     display: flex;
+     flex-direction:row;
+     justify-content: start;
+     align-items: start;
+     margin-left: 30px;
+     margin-right: 30px;
+     gap: 40px;
+     min-height: 80px;
+}
+
+.step>*{
+    visibility: visible;
+}
+.linespace{
+    order: 2;
+     margin-top: 4px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+    transition: all 2.1s ease;
+}
+
+.linespace1::after{
+    content: "";
+    position: absolute;
+    width: 3px;
+    margin-left: 5px;
+    top: 0px;
+    border-top-left-radius: 10%;
+    border-top-right-radius: 10%;
+    height: 90%;
+    background-color: rgb(0, 0, 0);
+    z-index: -1;
+}
+
+
+
+.linespace:hover{
+     margin-top: 4px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    width: 13px;
+    height: 13px;
+}
+
+.linespace:hover ~ .date{
+     transform: translateX(15px);
+}
+.linespace:hover ~ .task{
+     transform: translateX(-15px);
+}
+
+.date{
+    order: 1;
+    flex: 1;
+    text-align: right;
+    
+;
+}
+
+.task{
+    order: 3;
+    flex: 3;
+    margin-left: 10px;
+}
+
+
+.date,.task{
+    transition: all 0.4s ease;
+    margin-bottom: 16px;
+
+}
+
+
